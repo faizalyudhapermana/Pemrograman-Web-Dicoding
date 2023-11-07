@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UGM E-Sport</title>
+
+    <!-- My Own Styles -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>UGM E-Sport</h1>
+        <p>
+          Sebuah Unit Kegiatan Mahasiswa dan Komunitas Esports terbesar se-UGM
+        </p>
+      </div>
+
+      <nav>
+        <img src="assets/image/logo.png" alt="UGM E-Sport Logo" class="logo" />
+        <ul>
+          <li>
+            <a href="#sejarah">Sejarah</a>
+          </li>
+          <li>
+            <a href="#pengurus">Pengurus</a>
+          </li>
+          <li class="dropdown">
+            <a
+              href="javascript:void(0);"
+              class="dropdown-button"
+              onclick="toggleDropdown()"
+            >
+              Divisi &#9662;
+            </a>
+            <div id="dropdownMenu" class="dropdown-content">
+              <a href="#mlbb">Mobile Legends Bang Bang</a>
+              <a href="#valorant">Valorant</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Konten artikel -->
+      <div id="content">
+        <article id="sejarah" class="card">
+          <h2>Sejarah</h2>
+          <img src="assets/image/history.jpg" alt="sejarah" class="featured-image" />
+          <p>
+            UGM Esports Community merupakan sebuah komunitas yang diprakarsai oleh sivitas akademika UGM 
+            - yakni dosen dan mahasiswa Ilmu Komunikasi. Komunitas ini difungsikan secara resmi pada 5 Januari 2019 
+            dan bertindak sebagai wadah awal untuk mengakomodasi mahasiswa UGM yang unggul dalam bidang esports, 
+            guna mengikuti turnamen esports antarkampus pertama se-Indonesia - Indonesia Esports League University Series 
+            season 1 di tahun yang sama.
+          </p>
+        </article>
+
+        <article id="pengurus" class="card">
+          <h2>Pengurus</h2>
+          <img src="assets/image/pengurus.jpg" alt="pengurus" class="featured-image" />
+          <p>
+            Terdapat beberapa susunan pengurus pada Tahun 2023 yang terdiri dari Ketua Umum, Sekretaris, Bendahara, 
+            Bidang Perusahaan dan Keorganisasian, Game, Kreatif, Talent, Humas dan Publikasi, Aset dan Rumah Tangga, 
+            dan lain sebagainya.
+          </p>
+        </article>
+
+        <article id="divisi" class="card">
+          <h2>Divisi</h2>
+          <p>
+            Terdapat beberapa divisi Game, diantaranya:
+          </p>
+
+          <section id="mlbb">
+            <h3>Mobile Legends Bang Bang</h3>
+            <img src="assets/image/mlbb.jpg" alt="mlbb" class="featured-image" />
+            <p>
+              Mobile Legends: Bang Bang adalah permainan video seluler ber-genre multiplayer 
+              online battle arena (MOBA) yang dikembangkan dan diterbitkan oleh Moonton, 
+              anak perusahaan dari ByteDance.
+            </p>
+          </section>
+
+          <section id="valorant">
+            <h3>Valorant</h3>
+            <img src="assets/image/valo.jpg" alt="valorant" class="featured-image" />
+            <p>
+              Valorant (bergaya sebagai VALORANT) adalah permainan video POP (penembak orang pertama) 
+              taktis multipemain gratis yang dikembangkan dan diterbitkan oleh Riot Games, 
+              untuk Microsoft Windows.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <!-- Konten samping -->
+      <aside>
+        <article class="profile card">
+          <header>
+            <h2>Biodata</h2>
+            <figure>
+              <img src="assets/image/biodata.png" />
+            </figure>
+          </header>
+
+          <section>
+            <h3>Data Diri</h3>
+
+            <table>
+              <tr>
+                <th>Nama</th>
+                <td>Faizal Yudha Permana</td>
+              </tr>
+              <tr>
+                <th>Asal</th>
+                <td>Yogyakarta</td>
+              </tr>
+              <tr>
+                <th>Telepon</th>
+                <td>082241201499</td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Tentang Kami &#169; 2023, UGM E-Sport Community</p>
+    </footer>
+    <script>
+      function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.classList.toggle("show");
+      }
+
+      window.onclick = function(event) {
+        if (!event.target.matches(".dropdown-button")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

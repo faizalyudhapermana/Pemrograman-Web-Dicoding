@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: inline;
+}
+
+nav {
+  background-color: #393e46;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 20px;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+main {
+  padding: 20px;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+h2 {
+  color: #393e46;
+}
+
+h3 {
+  color: #393e46;
+}
+
+footer {
+  padding: 10px;
+  color: #000000;
+  background-color: #fac213;
+  text-align: center;
+  font-weight: bold;
+}
+
+.jumbotron {
+  font-size: 25px;
+  padding: 60px;
+  background-color: #fac213;
+  background-image: url('assets/image/wall.jpg');
+  text-align: center;
+  color: black;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 550px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #393e46;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color:white;
+}
+
+/* Show the dropdown when hovering over the "Divisi" link */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
